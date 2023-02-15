@@ -1,0 +1,31 @@
+.btn {
+ --bg: var(--primary);
+ padding: 0.9em 1.8em;
+ border-radius: 0.35em;
+ font-size: 0.83em;
+ font-weight: 700;
+ line-height: 1;
+ color: #fff;
+ background-color: var(--bg);
+ &--round {
+  border-radius: 2em;
+ }
+ &--clean {
+  --bg: var(--text);
+  background-color: transparent;
+  color: var(--bg);
+  &:hover {
+   --bg: var(--title);
+  }
+ }
+ &-lg {
+  font-size: 1.12em;
+ }
+ &.active {
+  --bg: var(--dark);
+  background-color: var(--bg);
+ }
+ &:hover {
+  opacity: 0.7;
+ }
+}
