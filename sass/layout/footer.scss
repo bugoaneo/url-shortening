@@ -1,0 +1,22 @@
+/*footer*/
+.footer {
+ color: #fff;
+ font-size: 0.85em;
+ background-color: var(--medium-dark);
+ .logo {
+  color: #fff;
+ }
+}
+
+.footer__list {
+ li {
+  a {
+   color: var(--light);
+  }
+  &:hover {
+   a {
+    color: var(--primary);
+   }
+  }
+ }
+}

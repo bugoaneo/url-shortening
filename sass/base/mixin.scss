@@ -17,7 +17,7 @@
 }
 
 @function strip-unit($number) {
-  @if type-of($number)=="number" and not unitless($number) {
+  @if type-of($number) == "number" and not unitless($number) {
     @return $number / ($number * 0 + 1);
   }
 
@@ -33,7 +33,7 @@
   $k: ($f-max - $f-min)/ ($w-max - $w-min);
   $b: $f-min - $k * $w-min;
 
-  $b: $b +$units;
+  $b: $b + $units;
 
   @return calc(#{$k} * 100vw + #{$b});
 }
@@ -58,110 +58,58 @@
   display: flex;
   flex-wrap: wrap;
 
-  @if ($justufy =="jst") {
+  @if ($justufy == "jst") {
     justify-content: flex-start;
   }
 
-  @if ($justufy =="jend") {
+  @if ($justufy == "jend") {
     justify-content: flex-end;
   }
 
-  @if ($justufy =="jc") {
+  @if ($justufy == "jc") {
     justify-content: center;
   }
 
-  @if ($justufy =="jsb") {
+  @if ($justufy == "jsb") {
     justify-content: space-between;
   }
 
-  @if ($justufy =="jsa") {
+  @if ($justufy == "jsa") {
     justify-content: space-around;
   }
 
-  @if ($align =="ac") {
+  @if ($align == "ac") {
     align-items: center;
   }
 
-  @if ($align =="as") {
+  @if ($align == "as") {
     align-items: stretch;
   }
 
-  @if ($align =="ab") {
+  @if ($align == "ab") {
     align-items: baseline;
   }
 
-  @if ($align =="ast") {
+  @if ($align == "ast") {
     align-items: flex-start;
-  }
-
-}
-
-
-@mixin col($dig: col) {
-  flex: 0 1 auto;
-
-  @include bp(650px) {
-    width: 100%;
-    padding: 0;
-    margin-bottom: 2em;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
-  @if ($dig ==1) {
-    width: 8.33333%;
-  }
-
-  @if ($dig ==2) {
-    width: 16.66667%;
-  }
-
-  @if ($dig ==3) {
-    width: 25%;
-  }
-
-  @if ($dig ==4) {
-    width: 33.33333%;
-  }
-
-  @if ($dig ==5) {
-    width: 41.66667%;
-  }
-
-  @if ($dig ==6) {
-    width: 50%;
-  }
-
-  @if ($dig ==7) {
-    width: 58.33333%;
-  }
-
-  @if ($dig ==8) {
-    width: 66.66667%;
-  }
-
-  @if ($dig ==9) {
-    width: 75%;
   }
 }
 
 @mixin center($axis: "both") {
   position: absolute;
 
-  @if ($axis =="both") {
+  @if ($axis == "both") {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
-  @if $axis =="x" {
+  @if $axis == "x" {
     left: 50%;
     transform: translateX(-50%);
   }
 
-  @if $axis =="y" {
+  @if $axis == "y" {
     top: 50%;
     transform: translateY(-50%);
   }

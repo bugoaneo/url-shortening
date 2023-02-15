@@ -1,0 +1,51 @@
+/*hero*/
+
+.hero {
+ background-color: #fff;
+}
+
+.hero__title {
+ @include fFS(40px, 78px, 320px, 1900px, 18px);
+ font-weight: 700;
+ // line-height: 1.1;
+ color: var(--title);
+}
+
+.hero__caption {
+ font-size: 1.12em;
+ // line-height: 1.1;
+}
+
+/*app*/
+
+/*result*/
+
+.result__original-link,
+.result__shorter-link {
+ font-size: 1.12em;
+ font-weight: 500;
+}
+
+.result__original-link {
+ color: var(--dark);
+}
+
+.result__shorter-link {
+ color: var(--primary);
+}
+
+/*statistic*/
+.statistics__caption {
+ margin-bottom: 0.5em;
+ font-size: 1.12em;
+ font-weight: 700;
+ line-height: 1.5;
+ color: var(--title);
+}
+
+.statistics__descr {
+ font-size: 0.85em;
+ @include bp(600px) {
+  font-size: 15px;
+ }
+}

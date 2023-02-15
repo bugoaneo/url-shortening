@@ -1,0 +1,19 @@
+/*header*/
+.logo {
+ color: var(--title);
+}
+
+/*nav*/
+.nav__list {
+ li {
+  a {
+   font-size: 15px;
+   font-weight: 500;
+  }
+  &:hover {
+   a {
+    color: var(--title);
+   }
+  }
+ }
+}
