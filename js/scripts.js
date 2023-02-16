@@ -1,10 +1,8 @@
-$(document).ready(function () {
+let menu = document.querySelector('.nav');
+let menuBTN = document.querySelector('.menu-trigger');
 
- $('a[data-target^="anchor"]').bind('click.smoothscroll', function () {
-  var target = $(this).attr('href'),
-   bl_top = $(target).offset().top - 5;
-  $('body, html').animate({ scrollTop: bl_top }, 700);
-  return false;
- });
-
+menuBTN.addEventListener('click', function (e) {
+ this.classList.toggle('open');
+ menu.classList.toggle('open');
+ document.body.classList.toggle('no-scroll');
 });
