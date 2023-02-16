@@ -1,7 +1,12 @@
 /*header*/
+.header {
+ position: relative;
+ padding-top: 2.5em;
+ background-color: #fff;
+}
 .logo {
  color: var(--title);
- margin-right: 5%;
+ margin-right: 2.5%;
 }
 
 .header__row {
@@ -12,14 +17,41 @@
 .nav {
  @include row(jsb, ac);
  flex: 1 1 auto;
+ @include bp(750px) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  top: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  padding: 1.5em 1.5em 2.5em 1.5em;
+  border-radius: 0.8em;
+  margin-top: 1.5em;
+  background-color: var(--dark);
+  transition: opacity 0.2s linear, transform 0.5s linear;
+  &.open {
+   transform: translateX(-50%) translateY(0);
+   opacity: 1;
+   visibility: visible;
+  }
+ }
 }
 .nav__list {
  @include row(jsb, ac);
  li {
   a {
-   padding: 0.5em;
+   padding: 1em;
    font-size: 15px;
-   font-weight: 500;
+   font-weight: 700;
+   @include bp(750px) {
+    font-size: 1.1em;
+    padding: 0.8em;
+   }
   }
   &:hover {
    a {
@@ -27,8 +59,30 @@
    }
   }
  }
+ @include bp(750px) {
+  flex-direction: column;
+  align-items: stretch;
+  padding-bottom: 1.2em;
+  border-bottom: 1px solid var(--text);
+ }
 }
 
 .nav__login {
  @include row(jsb, ac);
+ li + li {
+  margin-left: 0.95em;
+ }
+ @include bp(750px) {
+  flex-direction: column;
+  align-items: stretch;
+  padding-top: 1em;
+  li + li {
+   margin-top: 1em;
+   margin-left: 0;
+  }
+  .btn {
+   width: 100%;
+   font-size: 1.1em;
+  }
+ }
 }
