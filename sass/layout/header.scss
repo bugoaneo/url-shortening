@@ -1,12 +1,23 @@
 /*header*/
 .logo {
  color: var(--title);
+ margin-right: 5%;
+}
+
+.header__row {
+ @include row(jsb, ac);
 }
 
 /*nav*/
+.nav {
+ @include row(jsb, ac);
+ flex: 1 1 auto;
+}
 .nav__list {
+ @include row(jsb, ac);
  li {
   a {
+   padding: 0.5em;
    font-size: 15px;
    font-weight: 500;
   }
@@ -16,4 +27,8 @@
    }
   }
  }
+}
+
+.nav__login {
+ @include row(jsb, ac);
 }

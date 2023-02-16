@@ -8,6 +8,21 @@
  }
 }
 
+.footer__row {
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.footer__col {
+ flex: 1 1 auto;
+ &--wide {
+  flex: 2 1 auto;
+ }
+ @include bp(750px) {
+  flex: 1 1 100%;
+ }
+}
+
 .footer__list {
  li {
   a {
