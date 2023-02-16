@@ -43,6 +43,20 @@ img {
   padding: 0 20px;
 }
 
+/*title sistem*/
+.section__title {
+  margin-bottom: 0.5em;
+  @include fFS(25px, 35px, 320px, 1900px, 20px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--title);
+}
+.section__descr {
+  line-height: 1.75;
+}
+
+/*helpers*/
+
 .hidden {
   position: absolute;
   width: 0;
@@ -54,14 +68,6 @@ img {
   text-align: center;
 }
 
-/*title sistem*/
-.section__title {
-  margin-bottom: 0.5em;
-  @include fFS(25px, 35px, 320px, 1900px, 20px);
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--title);
-}
-.section__descr {
-  line-height: 1.75;
+.light {
+  color: #fff;
 }

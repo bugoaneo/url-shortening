@@ -72,6 +72,10 @@
 
 /*statistic*/
 .statistics {
+ padding: 6.5% 0;
+ @include bp(700px) {
+  padding: 20% 0;
+ }
 }
 
 .statistics__list {
@@ -92,6 +96,7 @@
   width: 100%;
   background-color: var(--primary);
   @include bp(700px) {
+   height: 100%;
    top: 0;
    left: 50%;
    transform: translateX(-50%);
@@ -159,5 +164,16 @@
  font-size: 0.85em;
  @include bp(600px) {
   font-size: 15px;
+ }
+}
+
+/*boost*/
+.boost {
+ padding: 3.5% 0;
+ @include bp(700px) {
+  padding: 20% 0;
+ }
+ .section__title {
+  margin-bottom: 1em;
  }
 }

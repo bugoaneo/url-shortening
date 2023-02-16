@@ -17,7 +17,17 @@
   <title>Shortly - Url Shortening API</title>
   <link rel="preload" href="fonts/poppins-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/main.css">
+  <style>
+    .boost {
+      background: url(img/bg-boost-desktop.svg) 0 0/cover no-repeat, var(--dark);
+    }
 
+    @media (max-width:700px) {
+      .boost {
+        background: url(img/bg-boost-mobile.svg) 0 50%/cover no-repeat, var(--dark);
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -181,9 +191,9 @@
         </div>
       </div>
     </section>
-    <section class="section section--bg">
+    <section class="section boost">
       <div class="container center-text">
-        <h2 class="section__title">Boost your links today</h2>
+        <h2 class="section__title light">Boost your links today</h2>
         <button class="btn btn-lg btn--round" type="button">Get Started</button>
       </div>
     </section>
