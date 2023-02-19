@@ -19,6 +19,9 @@
  &-lg {
   padding: 0.8em 1.6em;
   font-size: 1.12em;
+  @include bp(700px) {
+   font-size: 1.35em;
+  }
  }
  &.active {
   background-color: var(--dark);

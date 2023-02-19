@@ -22,9 +22,17 @@
       background: url(img/bg-boost-desktop.svg) 0 0/cover no-repeat, var(--dark);
     }
 
+    .app__wrapper {
+      background: url(img/bg-shorten-desktop.svg) 0 0/cover no-repeat, var(--dark);
+    }
+
     @media (max-width:700px) {
       .boost {
         background: url(img/bg-boost-mobile.svg) 0 50%/cover no-repeat, var(--dark);
+      }
+
+      .app__wrapper {
+        background: url(img/bg-shorten-mobile.svg) 0 50%/cover no-repeat, var(--dark);
       }
     }
   </style>
@@ -71,7 +79,11 @@
         <div class="app__wrapper">
           <form action="/*" method="POST" class="app__form form">
             <div class="form__row">
-              <label class="form__label" for="urlInput"><input class="form__input" type="url" name="" id="urlInput" placeholder="Shorten a link here..."></label>
+              <!-- edd class error -->
+              <label class="form__label" for="urlInput">
+                <input class="form__input" type="url" name="" id="urlInput" placeholder="Shorten a link here...">
+                <div class="error-msg">Please, add a link!</div>
+              </label>
               <button type="submit" class="btn btn-lg btn--primary">Shorten It!</button>
             </div>
           </form>
@@ -185,16 +197,16 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__row">
-        <div class="footer__col">
+        <div class="footer__logo">
           <div class="logo">
             <a href="/*"><svg viewBox="0 0 121 33" width="123" class="logo__icon">
                 <use xlink:href="img/sprite.svg#logo"></use>
               </svg></a>
           </div>
         </div>
-        <div class="footer__col footer__col--menu">
-          <div class="footer__row">
-            <div class="footer__col">
+        <div class="footer__menu">
+          <div class="footer__menu-list">
+            <div class="footer__menu-item">
               <h3 class="footer__caption">Features</h3>
               <ul class="footer__list">
                 <li><a href=""> Link Shortening</a></li>
@@ -202,7 +214,7 @@
                 <li><a href=""> Analytics</a></li>
               </ul>
             </div>
-            <div class="footer__col">
+            <div class="footer__menu-item">
               <h3 class="footer__caption">Resources</h3>
               <ul class="footer__list">
                 <li><a href=""> Blog</a></li>
@@ -210,7 +222,7 @@
                 <li><a href=""> Support</a></li>
               </ul>
             </div>
-            <div class="footer__col">
+            <div class="footer__menu-item">
               <h3 class="footer__caption">Company</h3>
               <ul class="footer__list">
                 <li><a href=""> About</a></li>
@@ -219,25 +231,23 @@
                 <li><a href=""> Contact</a></li>
               </ul>
             </div>
-            <div class="footer__col">
-              <div class="touch">
-                <ul class="touch__list">
-                  <li><a href=""><svg viewBox="0 0 24 24" width="24" class="icon">
-                        <use xlink:href="img/sprite.svg#fbk"></use>
-                      </svg></a></li>
-                  <li><a href=""><svg viewBox="0 0 24 24" width="24" class="icon">
-                        <use xlink:href="img/sprite.svg#twtr"></use>
-                      </svg></a></li>
-                  <li><a href=""><svg viewBox="0 0 24 24" width="24" class="icon">
-                        <use xlink:href="img/sprite.svg#ptrst"></use>
-                      </svg></a></li>
-                  <li><a href=""><svg viewBox="0 0 24 24" width="24" class="icon">
-                        <use xlink:href="img/sprite.svg#insgm"></use>
-                      </svg></a></li>
-                </ul>
-              </div>
-            </div>
           </div>
+        </div>
+        <div class="touch">
+          <ul class="touch__list">
+            <li><a href=""><svg viewBox="0 0 24 24" width="24" class="icon">
+                  <use xlink:href="img/sprite.svg#fbk"></use>
+                </svg></a></li>
+            <li><a href=""><svg viewBox="0 0 24 24" width="24" class="icon">
+                  <use xlink:href="img/sprite.svg#twtr"></use>
+                </svg></a></li>
+            <li><a href=""><svg viewBox="0 0 24 24" width="24" class="icon">
+                  <use xlink:href="img/sprite.svg#ptrst"></use>
+                </svg></a></li>
+            <li><a href=""><svg viewBox="0 0 24 24" width="24" class="icon">
+                  <use xlink:href="img/sprite.svg#insgm"></use>
+                </svg></a></li>
+          </ul>
         </div>
       </div>
     </div>

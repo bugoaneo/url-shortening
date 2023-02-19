@@ -1,13 +1,17 @@
 /*hero*/
 
 .hero {
- padding: 3% 20px 6% 20px;
+ padding: 3% 0 5% 0;
  background-color: #fff;
  .container {
   display: grid;
   grid-template-columns: 55% 74%;
   align-items: center;
-  @include bp(650px) {
+ }
+ @include bp(700px) {
+  padding: 6% 0 13% 0;
+  text-align: center;
+  .container {
    grid-template-columns: 100%;
    padding: 3% 20px 15% 20px;
   }
@@ -31,6 +35,7 @@
 .hero__pic {
  padding-left: 6%;
  @include bp(650px) {
+  margin-right: -53%;
   padding-left: 0;
   margin-bottom: 2em;
   order: -1;
@@ -43,6 +48,10 @@
 }
 
 /*app*/
+
+.app {
+ margin-top: -3.5%;
+}
 
 /*result*/
 
@@ -115,6 +124,9 @@
  @include bp(700px) {
   grid-template-columns: 1fr;
   padding-top: 1em;
+  .btn {
+   font-size: 16px;
+  }
  }
 }
 
@@ -217,9 +229,9 @@
 
 /*boost*/
 .boost {
- padding: 3% 0;
+ padding: 3.4em 0;
  @include bp(700px) {
-  padding: 20% 0;
+  padding: 6.5em 0;
  }
  .section__title {
   margin-bottom: 1em;

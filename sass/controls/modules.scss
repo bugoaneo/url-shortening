@@ -3,4 +3,32 @@
 /*touch*/
 .touch__list {
  @include row(jsb, ac);
+ li {
+  margin-right: 0.5em;
+  &:last-child {
+   margin-right: 0;
+  }
+  &:hover {
+   a {
+    color: var(--primary);
+   }
+  }
+ }
+ @include bp(800px) {
+  @include row(jc, ac);
+  li {
+   margin-right: 1em;
+   &:last-child {
+    margin-right: 0;
+   }
+  }
+ }
+}
+
+.error-msg {
+ position: absolute;
+ top: 100%;
+ left: 0;
+ color: inherit;
+ opacity: 0;
 }
