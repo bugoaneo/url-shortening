@@ -78,62 +78,46 @@
         </div>
         <div class="app__result result">
           <div class="result__item">
-            <div class="result__row">
-              <div class="result__cell result__sell--wild">
-                <a href="" class="result__original-link">https://pavellaptev.medium.com/%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-%D0%B2-sass-c00d3419e5f8</a>
+            <div class="result__container">
+              <div class="result__link">
+                <span class="result__original-link">https://pavellaptev.medium.com/%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-%D0%B2-sass-c00d3419e5f8</span>
               </div>
-              <div class="result__cell result__row">
-                <div class="result__cell">
-                  <a href="" class="result__shorter-link">https://shrtco.de/k8WVDu</a>
-                </div>
-                <div class="result__cell">
-                  <button class="btn  btn--primary" type="button">Copy</button>
-                </div>
+              <div class="result__action">
+                <a href="" class="result__shorter-link">https://shrtco.de/k8WVDu</a>
+                <button class="btn btn--primary copy-result" type="button">Copy</button>
               </div>
             </div>
           </div>
           <div class="result__item">
-            <div class="result__row">
-              <div class="result__cell result__sell--wild">
+            <div class="result__container">
+              <div class="result__link">
                 <a href="" class="result__original-link">https://url-shortening-api-landing-page-hdez.vercel.app/</a>
               </div>
-              <div class="result__cell result__row">
-                <div class="result__cell">
-                  <a href="" class="result__shorter-link">https://shrtco.de</a>
-                </div>
-                <div class="result__cell">
-                  <button class="btn  btn--primary active" type="button">Copied!</button>
-                </div>
+              <div class="result__action">
+                <span class="result__shorter-link">https://shrtco.de</span>
+                <button class="btn  btn--primary copy-result active" type="button">Copied!</button>
               </div>
             </div>
           </div>
           <div class="result__item">
-            <div class="result__row">
-              <div class="result__cell result__sell--wild">
-                <a href="" class="result__original-link">https://pavellaptev.medium.com/%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-%D0%B2-sass-c00d3419e5f8</a>
+            <div class="result__container">
+              <div class="result__link">
+                <span class="result__original-link">https://pavellaptev.medium.com/%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-%D0%B2-sass-c00d3419e5f8</span>
               </div>
-              <div class="result__cell result__row">
-                <div class="result__cell">
-                  <a href="" class="result__shorter-link">https://shrtco.de/k8WVDu</a>
-                </div>
-                <div class="result__cell">
-                  <button class="btn  btn--primary" type="button">Copy</button>
-                </div>
+              <div class="result__action">
+                <span class="result__shorter-link">https://shrtco.de/k8WVDu</span>
+                <button class="btn  btn--primary copy-result" type="button">Copy</button>
               </div>
             </div>
           </div>
           <div class="result__item">
-            <div class="result__row">
-              <div class="result__cell result__sell--wild">
-                <a href="" class="result__original-link">https://rtkleong10.github.io/frontend-mentor-shortly/</a>
+            <div class="result__container">
+              <div class="result__link">
+                <span class="result__original-link">https://rtkleong10.github.io/frontend-mentor-shortly/</span>
               </div>
-              <div class="result__cell result__row">
-                <div class="result__cell">
-                  <a href="" class="result__shorter-link">https://shrtco.de/XI4ZmH</a>
-                </div>
-                <div class="result__cell">
-                  <button class="btn  btn--primary active" type="button">Copied!</button>
-                </div>
+              <div class="result__action">
+                <span class="result__shorter-link">https://shrtco.de/XI4ZmH</span>
+                <button class="btn  btn--primary copy-result active" type="button">Copied link!</button>
               </div>
             </div>
           </div>
@@ -208,7 +192,7 @@
               </svg></a>
           </div>
         </div>
-        <div class="footer__col footer__col--wide">
+        <div class="footer__col footer__col--menu">
           <div class="footer__row">
             <div class="footer__col">
               <h3 class="footer__caption">Features</h3>
@@ -258,6 +242,22 @@
       </div>
     </div>
   </footer>
+
+  <!-- Template for result message -->
+  <template id="result-messages">
+    <div class="result__item">
+      <div class="result__container">
+        <div class="result__link">
+          <span class="result__original-link"></span>
+        </div>
+        <div class="result__action">
+          <span class="result__shorter-link"></span>
+          <button class="btn  btn--primary copy-result" type="button">Copy</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
   <script src="js/scripts.js"></script>
 </body>
 

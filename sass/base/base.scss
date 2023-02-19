@@ -46,7 +46,7 @@ img {
 /*title sistem*/
 .section__title {
   margin-bottom: 0.5em;
-  @include fFS(25px, 35px, 320px, 1900px, 20px);
+  @include fFS(25px, 38px, 320px, 1900px, 20px);
   font-weight: 700;
   line-height: 1.2;
   color: var(--title);

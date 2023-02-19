@@ -12,12 +12,14 @@
 .footer__row {
  display: flex;
  flex-wrap: wrap;
+ // display: grid;
+ // grid-template-columns: 35% 65%;
 }
 
 .footer__col {
  flex: 1 1 auto;
- &--wide {
-  flex: 1.3 1 auto;
+ &--menu {
+  flex: 1.35 1 auto;
  }
  @include bp(750px) {
   flex: 1 1 100%;
