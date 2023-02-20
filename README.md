@@ -1,5 +1,7 @@
 # Frontend Mentor - Shortly URL
 
+[Страница челленджа на сайте Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G)
+
 Проект поставляется как есть.
 
 Протестировано во всех современных браузерах и доступных устройствах.
