@@ -12,9 +12,6 @@
  &--clean {
   background-color: transparent;
   color: var(--bg);
-  &:hover {
-   --bg: var(--text);
-  }
  }
  &-lg {
   padding: 0.8em 1.6em;
@@ -71,7 +68,7 @@
    transform: translateY(0) rotate(-45deg);
   }
  }
- @include bp(750px) {
+ @include bp(700px) {
   display: block;
  }
 }

@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
   <meta name="robots" content="all">
-  <meta property="og:title" content="Url Shortening API" />
-  <meta property="og:image" content="img/desktop-preview.jpg" />
-  <meta property="og:description" content="More than just shorter links. Build your brand's recognition and get detailed insights on how your links are performing." />
-  <meta name="description" content="More than just shorter links. Build your brand's recognition and get detailed insights on how your links are performing." />
-  <meta name="keywords" content="Url Shortening API" />
+  <meta property="og:title" content="Url Shortening API">
+  <meta property="og:image" content="img/desktop-preview.jpg">
+  <meta property="og:description" content="More than just shorter links. Build your brand's recognition and get detailed insights on how your links are performing.">
+  <meta name="description" content="More than just shorter links. Build your brand's recognition and get detailed insights on how your links are performing.">
+  <meta name="keywords" content="Url Shortening API">
 
   <link rel="icon" href="favicon.png" type="image/png" sizes="34x34">
   <meta name="theme-color" content="#ffffff">
@@ -46,6 +46,7 @@
           <div class="logo"><a href="/*"><svg viewBox="0 0 121 33" width="123" class="logo__icon">
                 <use xlink:href="img/sprite.svg#logo"></use>
               </svg></a></div>
+          <!-- In mobile (700px & down) toggle class .active for open/close menu -->
           <nav class="nav">
             <ul class="nav__list">
               <li><a href="">Features</a></li>
@@ -57,6 +58,7 @@
               <li><a class="btn btn--round" href="">Sign Up</a></li>
             </ul>
           </nav>
+          <!-- Appears in mobile (700px & down), toggle class .active -->
           <button class="menu-trigger" type="button">Menu</button>
         </div>
       </div>
@@ -79,10 +81,10 @@
         <div class="app__wrapper">
           <form action="/*" method="POST" class="app__form form">
             <div class="form__row">
-              <!-- edd class error -->
+              <!-- Add an class .error for the error message -->
               <label class="form__label" for="urlInput">
-                <input class="form__input" type="url" name="" id="urlInput" placeholder="Shorten a link here...">
-                <div class="error-msg">Please, add a link!</div>
+                <input class="form__input" type="url" name="urlInput" id="urlInput" placeholder="Shorten a link here...">
+                <span class="error-msg">Please, add a link!</span>
               </label>
               <button type="submit" class="btn btn-lg btn--primary">Shorten It!</button>
             </div>
@@ -107,7 +109,7 @@
               </div>
               <div class="result__action">
                 <span class="result__shorter-link">https://shrtco.de</span>
-                <button class="btn  btn--primary copy-result active" type="button">Copied!</button>
+                <button class="btn btn--primary copy-result" type="button">Copy!</button>
               </div>
             </div>
           </div>
@@ -118,7 +120,7 @@
               </div>
               <div class="result__action">
                 <span class="result__shorter-link">https://shrtco.de/k8WVDu</span>
-                <button class="btn  btn--primary copy-result" type="button">Copy</button>
+                <button class="btn btn--primary copy-result" type="button">Copy</button>
               </div>
             </div>
           </div>
@@ -129,7 +131,7 @@
               </div>
               <div class="result__action">
                 <span class="result__shorter-link">https://shrtco.de/XI4ZmH</span>
-                <button class="btn  btn--primary copy-result active" type="button">Copied link!</button>
+                <button class="btn btn--primary copy-result active" type="button">Copied link!</button>
               </div>
             </div>
           </div>
@@ -262,7 +264,7 @@
         </div>
         <div class="result__action">
           <span class="result__shorter-link"></span>
-          <button class="btn  btn--primary copy-result" type="button">Copy</button>
+          <button class="btn btn--primary copy-result" type="button">Copy</button>
         </div>
       </div>
     </div>

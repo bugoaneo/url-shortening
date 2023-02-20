@@ -1,115 +1,120 @@
-# Frontend Mentor - Shortly URL shortening API Challenge solution
+# Frontend Mentor - Shortly URL
 
-This is a solution to the [Shortly URL shortening API Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+Проект поставляется как есть.
 
-## Table of contents
+Протестировано во всех современных браузерах и доступных устройствах.
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+Любые баги, недочеты, пожелания и исправления принимаются с **благодарностью**!
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+Верстка:
++ проходит валидацию,
++ соответствует БЭМ-нотации наименования классов
++ основана на философии независимых, изолированных модулей и единиц.
 
-## Overview
+Все **скрипты** в данном проекте присутствуют только для **демонстрации работы функциональных классов**. Никаких иных практических целей они не выполняют и **должны быть удалены**.
 
-### The challenge
+## Струтктурные классы
 
-Users should be able to:
+`.wrapper` - глобальная обертка, в которой живет верстка основного лайаута за исключением футера. Прижимает футер к низу сайта.
 
-- View the optimal layout for the site depending on their device's screen size
-- Shorten any valid URL
-- See a list of their shortened links, even after refreshing the browser
-- Copy the shortened link to their clipboard in a single click
-- Receive an error message when the `form` is submitted if:
-  - The `input` field is empty
+`.footer`- обкртка футера. Всегда внизу, всегда ЗА ПРЕДЕЛАМИ экрана.
 
-### Screenshot
+`.container` - глобальная обертка. Задает предельную ширину контенту. Центрует контент. Задает поля от границ экрана на мобильных устройствах.
 
-![](./screenshot.jpg)
+Любой блок с постфиксом `*row` - имеет флекс/грид дисплей.
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+`.nav` - класс обертки главного меню.
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+## Адаптер/Респонсив
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+Верстка выполнена в технике респонсива с 2 переломными точками на ширине `800 и 700 пикс`.
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+Данные экраны выбраны из соображений читаемости и удобства восприятия контента.
 
-### Links
+Дизайн для `таблетки` не был предоставлен.
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+Главное меню сворачивается в "бургер" на экране в 700 пикс.
 
-## My process
+`.menu-trigger` - класс кнопки-бургера для открытия мобильного меню. Скрыт до экрана в 700 пикс.
 
-### Built with
+## Функциональные классы
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+### Мобильное меню
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+`.active` - накидывается на обертку меню `.nav` и бургер `.menu-trigger` для открытия мобильной версии меню
 
-### What I learned
+`.no-scroll` - накидывается на `body`, для предотврашения скролла при открытом меню
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+### Форма-обработчик
 
-To see how you can add code snippets, see below:
+Форма реализована с помощью тега `form`. Имеет атрибуты: id, name, method, action. В стилизации атрибуты не участвуют.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+`.app__form.form` - классы формы. Не участвуют в стилизации. Могут быть использованы с любыми целями.  Нужны как точка отсчета для БЭМ-нейминга.
+
+`.form__input` - инпут формы. Имеет атрибуты: id, name. В стилизации атрибуты не участвуют. Обернут в лейбл, как обертку для стилизации.
+
+`.form__label` - Лейбл инпута. Обертка, контролирует размеры инпута. Задает стили визуальному полю для ввода инф-ции.
+
+#### Состояние "ошибка ввода/отправки"
+
+Для отображения состояния ошибки применяется класс `.error` на лейбле инпута `.form__label`.
+
+`.form__label.error` - класс-лист лейбла, если происходит ошибка отправки данных. В данном состоянии становится видно сообщение об ошибке.
+
+`.error-msg` - класс сообщения об ошибке. Появляется только если есть сочетание классов `.form__label.error` на инпуте формы.
+
+### Результат работы приложения
+
+Результатом работы приложения является блок с исходной и результирующей/укороченной ссылкой и кнопкой копирования этой, короткой, ссылки.
+
+`.app__result.result` - обертка для списка результатов. Все результаты должны появляться в ней.
+
+`.result__item` - отдельный пункт списка результатов. Имеет отступ снизу от соседа. У последнго элемента отступа нет.
+
+`.result__original-link` - класс для вывода исходной ссылки. Видимая длинна ссылки обрезается по достижению границы с блоком короткой ссылки тремя точками.
+
+`.result__shorter-link` - класс для вывода результирующей, короткой ссылки.
+
+`.copy-result` - класс для кнопки "копировать", не участвует в стилизации. Использован в скриптах для демонстрации. Может быть удален/заменен без искажения разметки.
+
+Кнопка "копировать" при клике получает дополнительный класс `.active`.
+
+> Я посчитала избыточным для user experience делать оба этих блока именно "ссылками". Блоки могут быть переиначены в ссылки, по желанию разработчика. Стиллизация не пострадает.
+
+Присутствующие на данный момент в верстке `.result__item` нужны исключительно для демонстрационных целей. Для генерации в разметке вшит **пустой темплейт**, который может быть использован по желанию разработчика или удален.
+
+#### Темплейт/шаблон для генерации отдельного результата.
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+  <template id="result-messages">
+    <div class="result__item">
+      <div class="result__container">
+        <div class="result__link">
+          <span class="result__original-link"></span>
+        </div>
+        <div class="result__action">
+          <span class="result__shorter-link"></span>
+          <button class="btn  btn--primary copy-result" type="button">Copy</button>
+        </div>
+      </div>
+    </div>
+  </template>
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+## Кнопки
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Все кнопки оформлены как тег `<button>` c родительским классом `.btn`.
 
-### Continued development
+Родительский класс можт быть применен к любому блоку для получения внешнего вида "кнопки".
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Внешний вид кнопки контролируется следующими классами и модификаторами
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+`.btn` - глобальный, родительский класс. Блок по БЭМ. Придает основные визуальные стили кнопке.
 
-### Useful resources
+`.btn-lg` - дополнительный класс. Придает большой размер кнопке.
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+`.btn--round` - модификатор, придает пропроциональный бордер-радиус.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+`.btn--clean` - модификатор, придает прозрачный бекграунд.
 
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+`.active` - дополнительный класс. Придает темный фон. В дизайне использован для кнопки "копировать".

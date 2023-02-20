@@ -20,7 +20,7 @@
 .nav {
  @include row(jsb, ac);
  flex: 1 1 auto;
- @include bp(750px) {
+ @include bp(700px) {
   position: absolute;
   left: 50%;
   transform: translateX(-50%) translateY(-100%);
@@ -51,7 +51,7 @@
    padding: 1em;
    font-size: 15px;
    font-weight: 700;
-   @include bp(750px) {
+   @include bp(700px) {
     font-size: 1.1em;
     padding: 0.8em;
    }
@@ -62,7 +62,7 @@
    }
   }
  }
- @include bp(750px) {
+ @include bp(700px) {
   flex-direction: column;
   align-items: stretch;
   padding-bottom: 1.2em;
@@ -75,7 +75,7 @@
  li + li {
   margin-left: 0.95em;
  }
- @include bp(750px) {
+ @include bp(700px) {
   flex-direction: column;
   align-items: stretch;
   padding-top: 1em;

@@ -519,7 +519,7 @@ img {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   .nav {
     position: absolute;
     left: 50%;
@@ -576,7 +576,7 @@ img {
   font-size: 15px;
   font-weight: 700;
 }
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   .nav__list li a {
     font-size: 1.1em;
     padding: 0.8em;
@@ -585,7 +585,7 @@ img {
 .nav__list li:hover a {
   color: var(--title);
 }
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   .nav__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -615,7 +615,7 @@ img {
 .nav__login li + li {
   margin-left: 0.95em;
 }
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   .nav__login {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -922,7 +922,7 @@ img {
 .statistics__descr {
   font-size: 0.85em;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .statistics__descr {
     font-size: 15px;
   }
@@ -1181,9 +1181,6 @@ img {
   background-color: transparent;
   color: var(--bg);
 }
-.btn--clean:hover {
-  --bg: var(--text);
-}
 .btn-lg {
   padding: 0.8em 1.6em;
   font-size: 1.12em;
@@ -1253,7 +1250,7 @@ img {
       -ms-transform: translateY(0) rotate(-45deg);
           transform: translateY(0) rotate(-45deg);
 }
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   .menu-trigger {
     display: block;
   }
